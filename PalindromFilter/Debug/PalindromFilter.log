@@ -1,0 +1,3 @@
+﻿  PalindromFilter.cpp
+C:\Users\Seth\source\repos\PalindromFilter\PalindromFilter.cpp(27,20): warning C4018: <: несоответствие типов со знаком и без знака
+  PalindromFilter.vcxproj -> C:\Users\Seth\source\repos\PalindromFilter\Debug\PalindromFilter.exe
