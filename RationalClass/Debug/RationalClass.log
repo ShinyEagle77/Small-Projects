@@ -1,2 +1,4 @@
 ﻿  RationalClass.cpp
+C:\Users\Seth\source\repos\RationalClass\RationalClass.cpp(353,34): warning C4101: ia: неиспользованная локальная переменная
+C:\Users\Seth\source\repos\RationalClass\RationalClass.cpp(362,30): warning C4101: de: неиспользованная локальная переменная
   RationalClass.vcxproj -> C:\Users\Seth\source\repos\RationalClass\Debug\RationalClass.exe

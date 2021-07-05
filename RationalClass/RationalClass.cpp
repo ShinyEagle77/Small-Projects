@@ -17,6 +17,11 @@ public:
 
     Rational(int numerator, int denominator) {
 
+    	if (denominator == 0)
+    	{
+            throw invalid_argument("Denominator != 0");
+    	}
+    	
 		if (denominator < 0) {
 		            if (numerator < 0) { 
 		                denominator = abs(denominator);
@@ -98,6 +103,10 @@ Rational operator * (const Rational& a, const Rational& b)
 
 Rational operator / (const Rational& a, const Rational& b)
 {
+	if(b.Numerator() == 0)
+	{
+        throw domain_error("Nod !=0");
+	}
     return { (a.Numerator() * b.Denominator()),( a.Denominator() * b.Numerator()) };
 }
 
@@ -334,6 +343,24 @@ int main() {
         }
     }
 
-    cout << "OK" << endl;
-    return 0;
+		try {
+            Rational r(1, 0);
+            cout << "Doesn't throw in case of zero denominator" << endl;
+            return 1;
+        }
+        catch (invalid_argument& ia) {
+            // cout << ia.what() << endl;
+        }
+
+        try {
+            auto x = Rational(1, 2) / Rational(0, 1);
+            cout << "Doesn't throw in case of division by zero" << endl;
+            return 2;
+        }
+        catch (domain_error& de) {
+           // cout << de.what() << endl;
+        }
+
+        cout << "OK" << endl;
+        return 0;
 }
